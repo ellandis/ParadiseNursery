@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
       <header className="first_page">
         <div className="main_event">
           <div className="first_page_name_btn">
@@ -36,18 +35,7 @@ function App() {
 
       <div className={`event-list-container ${showRoom ? "visible" : ""}`}>
         <GreenHouse />
-=======
-    <header>
-      <div>
-      <h1>Welcome to Paradise Nursery</h1>
-      <p>Where your plant journey begins!</p>
-      <div>
-        
-        <button onClick={handleGetStarted}>Get Started</button>
->>>>>>> eec2e6e51c7a381beba8a503d75f3d693de68870
       </div>
-      </div>
-    </header>
     </>
   );
 }
