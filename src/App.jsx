@@ -1,4 +1,7 @@
 import { useState } from "react"
+import AboutUs from "./AboutUs"
+import GreenHouse from "./GreenHouse";
+import "./App.css";
 
 function App() {
   const [showRoom, setShowRoom] = useState(false);
@@ -12,16 +15,15 @@ function App() {
       <header className="first_page">
         <div className="main_event">
           <div className="first_page_name_btn">
-            <h1 className="budget_heading">Conference Expense Planner</h1>
+            <h1 className="budget_heading">Pick your next plant now</h1>
             <p className="budget_sentence">
-              {" "}
-              Plan your next major event with us!
+              Explore our wide variety of plants and gardening supplies to create your own green paradise.
             </p>
             <div className="getstarted_btn">
               <button
                 onClick={() => handleGetStarted()}
                 className="get-started-btn">
-                Get Started
+                Start Planting
               </button>
             </div>
           </div>
