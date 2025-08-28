@@ -1,27 +1,31 @@
 import React from 'react';
+import paradiseImage from './assets/paradise.jpeg';
+import meditationImage from './assets/meditation.jpeg';
+// Import additional plant images as needed
+import multiPlePlantsImage from './assets/multipleplants.jpeg';
 
 function GreenHouse() {
     
     const plants = [
             {
                 name: "Monstera",
-                image: "https://www.thesill.com/cdn/shop/products/monstera-deliciosa-plant.jpg"
+                image: paradiseImage
             },
             {
                 name: "Fiddle Leaf Fig",
-                image: "https://www.thesill.com/cdn/shop/products/fiddle-leaf-fig-plant.jpg"
+                image: meditationImage
             },
             {
                 name: "Snake Plant",
-                image: "https://www.thesill.com/cdn/shop/products/snake-plant-laurentii.jpg"
+                image: 
             },
             {
                 name: "Peace Lily",
-                image: "https://www.thesill.com/cdn/shop/products/peace-lily-plant.jpg"
+                image: 
             },
             {
                 name: "Spider Plant",
-                image: "https://www.thesill.com/cdn/shop/products/spider-plant.jpg"
+                image: 
             }
         ];
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutUs = () => (
-    <div style={{ padding: '2rem', maxWidth: '600px', margin: 'auto' }}>
+    <div style={{color: 'black', padding: '2rem', maxWidth: '600px', margin: 'auto' }}>
         <h1>About Us</h1>
         <p>
             Welcome to Paradise Nursery! We are passionate about plants and dedicated to helping you create your own green paradise.
