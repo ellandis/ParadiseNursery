@@ -1,33 +1,34 @@
 import React from 'react';
-import paradiseImage from './assets/paradise.jpeg';
-import meditationImage from './assets/meditation.jpeg';
-// Import additional plant images as needed
-import multiPlePlantsImage from './assets/multiPlantPack.jpeg';
-import officePlantImage from './assets/officePlants.jpeg';
-import rainPlant from './assets/rainForest.jpeg'
+
+import './GreenHouse.css';
 
 function GreenHouse() {
     
     const plants = [
             {
                 name: "Monstera",
-                image: paradiseImage
+                image: paradiseImage,
+                idx: 0
             },
             {
                 name: "Fiddle Leaf Fig",
-                image: meditationImage
+                image: meditationImage,
+                idx: 1      
             },
             {
                 name: "Snake Plant",
-                image: multiPlePlantsImage
+                image: multiPlePlantsImage,
+                idx: 2
             },
             {
                 name: "Peace Lily",
-                image: officePlantImage
+                image: officePlantImage,
+                idx: 3
             },
             {
                 name: "Spider Plant",
-                image: rainPlant
+                image: rainPlant,
+                idx: 4
             }
         ];
 
@@ -36,27 +37,34 @@ function GreenHouse() {
         //     <h1>Welcome to Paradise Nursery GreenHouse</h1>
         //     {/* Add your greenhouse content here */}
         // </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '24px' }}>
+        <div className='greenhouse-container' >
             {plants.map((plant, idx) => (
-                <div
-                    key={plant.name}
-                    style={{
-                        flex: '1 0 30%',
-                        boxSizing: 'border-box',
-                        maxWidth: '30%',
-                        minWidth: '220px',
-                        background: '#f4f4f4',
-                        borderRadius: '8px',
-                        padding: '12px',
-                        textAlign: 'center',
-                    }}
-                >
-                    <img
+                <div key={plant.name} className='greenhouse-item'>
+                    <img className='greenhouse-image'
                         src={plant.image}
                         alt={plant.name}
-                        style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '6px' }}
+                        
                     />
                     <h3>{plant.name}</h3>
+
+                    <div className='greenhouse-controls' >
+                        <button
+                            onClick={() => {
+                                const updated = [...plants];
+                                updated[idx].count = Math.max((updated[idx].count || 0) - 1, 0);
+                                GreenHouse.forceUpdate?.();
+                            }}
+                            disabled={plant.count === 0}
+                        >-</button>
+                        <span>{plant.count || 0}</span>
+                        <button
+                            onClick={() => {
+                                const updated = [...plants];
+                                updated[idx].count = (updated[idx].count || 0) + 1;
+                                GreenHouse.forceUpdate?.();
+                            }}
+                        >+</button>
+                    </div>
                 </div>
             ))}
         </div>
