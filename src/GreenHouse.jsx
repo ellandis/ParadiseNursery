@@ -2,7 +2,9 @@ import React from 'react';
 import paradiseImage from './assets/paradise.jpeg';
 import meditationImage from './assets/meditation.jpeg';
 // Import additional plant images as needed
-import multiPlePlantsImage from './assets/multipleplants.jpeg';
+import multiPlePlantsImage from './assets/multiPlantPack.jpeg';
+import officePlantImage from './assets/officePlants.jpeg';
+import rainPlant from './assets/rainForest.jpeg'
 
 function GreenHouse() {
     
@@ -17,15 +19,15 @@ function GreenHouse() {
             },
             {
                 name: "Snake Plant",
-                image: 
+                image: multiPlePlantsImage
             },
             {
                 name: "Peace Lily",
-                image: 
+                image: officePlantImage
             },
             {
                 name: "Spider Plant",
-                image: 
+                image: rainPlant
             }
         ];
 
