@@ -42,17 +42,17 @@ export const plantSlice = createSlice({
   ],
   reducers: {
     addPlant: (state, action) => {
-      const plant = state.find((p) => p.name === action.payload.name);
-      if (plant) {
-        plant.quantity += action.payload.quantity;
+      const { payload: index } = action;
+      if (state[index] && state[index].quantity < 10) {
+        state[index].quantity += 1;
       }
     },
     removePlant: (state, action) => {
-      const plant = state.find((p) => p.name === action.payload.name);
-      if (plant) {
-        plant.quantity = Math.max(0, plant.quantity - action.payload.quantity);
+      const { payload: index } = action;
+      if (state[index] && state[index].quantity > 0) {
+        state[index].quantity -= 1;
       }
-    }
+    },
   },
 });
 
