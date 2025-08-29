@@ -2,6 +2,34 @@ h3,span{
     color: black;
 }
 
+li{
+    border: 3px solid rgb(247, 93, 119);
+    list-style: none;
+     display: flex;
+  flex-direction: column; /* stack image and text vertically */
+  align-items: center;     /* center horizontally */
+  justify-content: center; /* center vertically if needed */
+  text-align: center;
+  padding: 10px;
+  width: 100%;             /* or set a fixed width */
+  box-sizing: border-box;
+}
+
+.cart-icon {
+    font-size: 84px;
+    margin-left: 8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #cdfa03;
+    border-bottom: 2px solid #ccc;
+    color:black;
+}
+
 .greenhouse-container {
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +52,12 @@ h3,span{
     height: 180px;
     object-fit: cover;
     border-radius: 6px;
+}
+.plant-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    /* width: 50%; */
 }
 
 .greenhouse-controls {
